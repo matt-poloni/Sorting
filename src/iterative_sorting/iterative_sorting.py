@@ -28,14 +28,18 @@ def bubble_sort( arr ):
 def count_sort( arr, maximum=-1 ):
     count_dict = {}
     for i in arr:
+        if i < 0:
+            return "Error, negative numbers not allowed in Count Sort"
         try:
             count_dict[i] += 1
         except:
             count_dict[i] = 1
+
     if maximum == -1:
         for j in count_dict.keys():
             if j > maximum:
                 maximum = j
+
     sum = 0
     count_list = []
     for i in range(0, maximum + 1):
@@ -44,6 +48,7 @@ def count_sort( arr, maximum=-1 ):
         except:
             pass
         count_list.append(sum)
+        
     start = 0
     for (num, count) in enumerate(count_list):
         if count > start:

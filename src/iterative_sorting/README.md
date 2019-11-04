@@ -87,7 +87,7 @@ Recall that the runtime complexity of an algorithm, often expressed using *Big O
 Look into Counting Sort.
 - How is this algorithm different from other iterative sorting algorithms?
     - What are the advantages/disadvantages to this type of sorting algorithm?
-- [ ] Take a look a the pseudocode for this algorithm and try implementing it in Python.
+- [x] Take a look a the pseudocode for this algorithm and try implementing it in Python.
 
 ### You Might be Surprised at What Passes for a Sorting Algorithm
 - Explore Bogo Sort and summarize how it works in a couple of sentences.
