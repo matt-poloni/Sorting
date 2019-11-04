@@ -21,7 +21,7 @@ Think back to class or team picture day. Everyone stands in a line facing the ph
 
 
 ### Your Task
-- Implement the `insertion_sort()` function in the Guided Project with your TA
+- [x] Implement the `insertion_sort()` function in the Guided Project with your TA
 
 
 ### Real-World Applications
