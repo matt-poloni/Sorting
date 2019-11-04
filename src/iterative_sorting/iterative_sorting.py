@@ -26,5 +26,27 @@ def bubble_sort( arr ):
 
 # STRETCH: implement the Count Sort function below
 def count_sort( arr, maximum=-1 ):
-
+    count_dict = {}
+    for i in arr:
+        try:
+            count_dict[i] += 1
+        except:
+            count_dict[i] = 1
+    if maximum == -1:
+        for j in count_dict.keys():
+            if j > maximum:
+                maximum = j
+    sum = 0
+    count_list = []
+    for i in range(0, maximum + 1):
+        try:
+            sum += count_dict[i]
+        except:
+            pass
+        count_list.append(sum)
+    start = 0
+    for (num, count) in enumerate(count_list):
+        if count > start:
+            arr[start:count] = [num] * (count - start)
+            start = count
     return arr
