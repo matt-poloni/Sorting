@@ -73,10 +73,10 @@ While ***Selection Sort*** is one of the easier sorting algorithms to understand
 Recall that the runtime complexity of an algorithm, often expressed using *Big O notation*, tells us how the amount of operations our algorithm requires will grow as the size of our input grows. ***Selection Sort*** has  a runtime of O(n²), making it impractical to use with many large, real-world data sets.
 
 ### Your Task
-- Complete the missing parts of `selection_sort()` in `iterative_sorting.py`.
+- [x] Complete the missing parts of `selection_sort()` in `iterative_sorting.py`.
 
 ## TO-DO in iterative_sorting.py
-- Complete `selection_sort()` and `bubble_sort()`
+- [x] Complete `selection_sort()` and `bubble_sort()`
 
 ## Stretch Goals
 
