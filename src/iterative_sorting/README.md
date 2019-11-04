@@ -43,7 +43,7 @@ In **Bubble Sort**, we make a series of swaps between adjacent elements, gradual
 However, it should be noted that if you perform **Bubble Sort** on an array that's already sorted, it will only require a single pass through the array, making its best-case performance linear. It's also very simple to implement.
 
 ### Your Task
-- Complete `bubble_sort()` in `iterative_sorting.py`.
+- [x] Complete `bubble_sort()` in `iterative_sorting.py`.
 
 
 ## Selection Sort
