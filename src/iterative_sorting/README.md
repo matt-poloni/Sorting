@@ -81,7 +81,7 @@ Recall that the runtime complexity of an algorithm, often expressed using *Big O
 ## Stretch Goals
 
 ### Try to write a search function
-- [ ] Complete the functions in `searching.py`
+- [x] Complete the functions in `searching.py`
 
 ### There are a few "order n" sorting algorithms whose runtime will be linear, even in a worst case scenario. 
 Look into Counting Sort.
