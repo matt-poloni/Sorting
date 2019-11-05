@@ -4,7 +4,7 @@ def merge( arrA, arrB ):
     merged_arr = [0] * elements
     # TO-DO
     i_A, i_B = 0, 0
-    # Current index of merged_arr is the sum of the indicies
+    # Current index of merged_arr is the sum of the indices
     # of arrA & arrB
     while (i := i_A + i_B) < elements:
         try:
@@ -35,7 +35,6 @@ def merge( arrA, arrB ):
         if b <= a:
             i_B += 1
 
-
     return merged_arr
 
 # TO-DO: implement the Merge Sort function below USING RECURSION
@@ -53,10 +52,55 @@ def merge_sort( arr ):
 # STRETCH: implement an in-place merge sort algorithm
 def merge_in_place(arr, start, mid, end):
     # TO-DO
+    arrA, arrB = arr[start:mid], arr[mid:end]
+    i_A, i_B = 0, 0
+    # Current index of arr is the sum of the indices
+    # of arrA & arrB added to the starting index
+    while (i := start + i_A + i_B) < end:
+        print(i, i_A, i_B)
+        print(arr[start:end])
+        print(arrA)
+        print(arrB)
+        try:
+            a = arrA[i_A]
+        # If we've reached the end of arrA, fill w/ arrB
+        except:
+            arr[i:] = arrB[i_B:]
+            break
+        
+        try:
+            b = arrB[i_B]
+        # If we've reached the end of arrB, fill w/ arrA
+        except:
+            arr[i:] = arrA[i_A:]
+            break
+        
+        # If the values are equal, add them both and skip the
+        # next index; otherwise, add the lesser value
+        if a == b:
+            print(arr[i:i + 2], a, b)
+            arr[i:i + 2] = [a, b]
+            print(arr[i:i + 2])
+        elif a < b:
+            print(arr[i], a)
+            arr[i] = a
+            print(arr[i])
+        elif b < a:
+            print(arr[i], b)
+            arr[i] = b
+            print(arr[i])
+        # Increment the index wherever an element was added from
+        if a <= b:
+            i_A += 1
+        if b <= a:
+            i_B += 1
+        print('-------')
+
     return arr
 
 def merge_sort_in_place(arr, l, r): 
     # TO-DO
+    
     return arr
 
 
