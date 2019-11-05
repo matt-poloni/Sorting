@@ -21,7 +21,7 @@ Think back to class or team picture day. Everyone stands in a line facing the ph
 
 
 ### Your Task
-- Implement the `insertion_sort()` function in the Guided Project with your TA
+- [x] Implement the `insertion_sort()` function in the Guided Project with your TA
 
 
 ### Real-World Applications
@@ -43,7 +43,7 @@ In **Bubble Sort**, we make a series of swaps between adjacent elements, gradual
 However, it should be noted that if you perform **Bubble Sort** on an array that's already sorted, it will only require a single pass through the array, making its best-case performance linear. It's also very simple to implement.
 
 ### Your Task
-- Complete `bubble_sort()` in `iterative_sorting.py`.
+- [x] Complete `bubble_sort()` in `iterative_sorting.py`.
 
 
 ## Selection Sort
@@ -73,21 +73,21 @@ While ***Selection Sort*** is one of the easier sorting algorithms to understand
 Recall that the runtime complexity of an algorithm, often expressed using *Big O notation*, tells us how the amount of operations our algorithm requires will grow as the size of our input grows. ***Selection Sort*** has  a runtime of O(n²), making it impractical to use with many large, real-world data sets.
 
 ### Your Task
-- Complete the missing parts of `selection_sort()` in `iterative_sorting.py`.
+- [x] Complete the missing parts of `selection_sort()` in `iterative_sorting.py`.
 
 ## TO-DO in iterative_sorting.py
-- Complete `selection_sort()` and `bubble_sort()`
+- [x] Complete `selection_sort()` and `bubble_sort()`
 
 ## Stretch Goals
 
 ### Try to write a search function
-- Complete the functions in `searching.py`
+- [x] Complete the functions in `searching.py`
 
 ### There are a few "order n" sorting algorithms whose runtime will be linear, even in a worst case scenario. 
 Look into Counting Sort.
 - How is this algorithm different from other iterative sorting algorithms?
     - What are the advantages/disadvantages to this type of sorting algorithm?
-- Take a look a the pseudocode for this algorithm and try implementing it in Python.
+- [x] Take a look a the pseudocode for this algorithm and try implementing it in Python.
 
 ### You Might be Surprised at What Passes for a Sorting Algorithm
 - Explore Bogo Sort and summarize how it works in a couple of sentences.
