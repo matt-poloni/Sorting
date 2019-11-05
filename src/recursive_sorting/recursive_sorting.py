@@ -21,17 +21,20 @@ def merge( arrA, arrB ):
             merged_arr[i:] = arrA[i_A:]
             break
         
-        # If the values are equal, add them both and skip the next index
+        # If the values are equal, add them both and skip the
+        # next index; otherwise, add the lesser value
         if a == b:
             merged_arr[i:i + 2] = [a, b]
-            i_A += 1
-            i_B += 1
-        elif b < a:
-            merged_arr[i] = b
-            i_B += 1
         elif a < b:
             merged_arr[i] = a
+        elif b < a:
+            merged_arr[i] = b
+        # Increment the index wherever an element was added from
+        if a <= b:
             i_A += 1
+        if b <= a:
+            i_B += 1
+
 
     return merged_arr
 
