@@ -3,33 +3,34 @@ def merge( arrA, arrB ):
     elements = len( arrA ) + len( arrB )
     merged_arr = [0] * elements
     # TO-DO
-    i, i_A, i_B = [0] * 3
-    while i < elements:
+    i_A, i_B = 0, 0
+    # Current index of merged_arr is the sum of the indicies
+    # of arrA & arrB
+    while (i := i_A + i_B) < elements:
         try:
             a = arrA[i_A]
         # If we've reached the end of arrA, fill w/ arrB
         except:
             merged_arr[i:] = arrB[i_B:]
             break
+        
         try:
             b = arrB[i_B]
         # If we've reached the end of arrB, fill w/ arrA
         except:
             merged_arr[i:] = arrA[i_A:]
             break
+        
         # If the values are equal, add them both and skip the next index
         if a == b:
-            merged_arr[i:i + 1] = [a, b]
-            i += 2
+            merged_arr[i:i + 2] = [a, b]
             i_A += 1
             i_B += 1
         elif b < a:
             merged_arr[i] = b
-            i += 1
             i_B += 1
         elif a < b:
             merged_arr[i] = a
-            i += 1
             i_A += 1
 
     return merged_arr
