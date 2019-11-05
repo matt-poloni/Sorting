@@ -57,52 +57,47 @@ def merge_in_place(arr, start, mid, end):
     # Current index of arr is the sum of the indices
     # of arrA & arrB added to the starting index
     while (i := start + i_A + i_B) < end:
-        print(i, i_A, i_B)
-        print(arr[start:end])
-        print(arrA)
-        print(arrB)
         try:
             a = arrA[i_A]
         # If we've reached the end of arrA, fill w/ arrB
         except:
-            arr[i:] = arrB[i_B:]
+            arr[i:end] = arrB[i_B:]
             break
         
         try:
             b = arrB[i_B]
         # If we've reached the end of arrB, fill w/ arrA
         except:
-            arr[i:] = arrA[i_A:]
+            arr[i:end] = arrA[i_A:]
             break
         
         # If the values are equal, add them both and skip the
         # next index; otherwise, add the lesser value
         if a == b:
-            print(arr[i:i + 2], a, b)
             arr[i:i + 2] = [a, b]
-            print(arr[i:i + 2])
         elif a < b:
-            print(arr[i], a)
             arr[i] = a
-            print(arr[i])
         elif b < a:
-            print(arr[i], b)
             arr[i] = b
-            print(arr[i])
         # Increment the index wherever an element was added from
         if a <= b:
             i_A += 1
         if b <= a:
             i_B += 1
-        print('-------')
-
     return arr
 
 def merge_sort_in_place(arr, l, r): 
     # TO-DO
-    
+    arr_len = len(arr[l:r+1])
+    mid = (l + r) // 2 # Find the middle index
+    if arr_len > 1:
+        merge_sort_in_place(arr, l, mid)
+        merge_sort_in_place(arr, mid, r+1)
+    merge_in_place(arr, l, mid, r+1)
     return arr
 
+arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
+merge_sort_in_place(arr1, 0, len(arr1)-1)
 
 # STRETCH: implement the Timsort function below
 # hint: check out https://github.com/python/cpython/blob/master/Objects/listsort.txt
