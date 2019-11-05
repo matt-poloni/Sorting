@@ -88,7 +88,7 @@ def merge_in_place(arr, start, mid, end):
 
 def merge_sort_in_place(arr, l, r): 
     # TO-DO
-    arr_len = len(arr[l:r+1])
+    arr_len = len(arr[l:r])
     mid = (l + r) // 2 # Find the middle index
     if arr_len > 1:
         merge_sort_in_place(arr, l, mid)
