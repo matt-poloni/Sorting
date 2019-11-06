@@ -4,7 +4,7 @@ def merge( arrA, arrB ):
     merged_arr = [0] * elements
     # TO-DO
     i_A, i_B = 0, 0
-    # Current index of merged_arr is the sum of the indices
+    # Current index of merged_arr is the sum of the indicies
     # of arrA & arrB
     while (i := i_A + i_B) < elements:
         try:
@@ -86,18 +86,17 @@ def merge_in_place(arr, start, mid, end):
             i_B += 1
     return arr
 
-def merge_sort_in_place(arr, l, r): 
+def merge_sort_in_place(arr, l, r):
     # TO-DO
-    arr_len = len(arr[l:r])
-    mid = (l + r) // 2 # Find the middle index
-    if arr_len > 1:
-        merge_sort_in_place(arr, l, mid)
-        merge_sort_in_place(arr, mid, r+1)
-    merge_in_place(arr, l, mid, r+1)
+    m = ((l + r) // 2) + 1
+    if r - l > 0:
+        merge_sort_in_place(arr, l, m - 1)
+        merge_sort_in_place(arr, m, r)
+        merge_in_place(arr, l, m, r+1)
     return arr
 
-arr1 = [1, 5, 8, 4, 2, 9, 6, 0, 3, 7]
-merge_sort_in_place(arr1, 0, len(arr1)-1)
+arr1 = [8, 4, 2]
+print(merge_sort_in_place(arr1, 0, len(arr1)-1))
 
 # STRETCH: implement the Timsort function below
 # hint: check out https://github.com/python/cpython/blob/master/Objects/listsort.txt
