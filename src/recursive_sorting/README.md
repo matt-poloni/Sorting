@@ -63,19 +63,19 @@ So you decide to break this insane task up into more manageable pieces. First, y
 Have you ever wondered how some of the languages you use actually implement their built-in `sort()` functions? Many of them actually utilize the ***Merge Sort*** algorithm! *WHY* they do so is because this sorting algorithm is reliably efficient. In all cases, regardless of how sorted the original data set might be, this algorithm will have a runtime of O(n log(n)), one of the better sorting runtimes out there.
 
 ### Your Task 
-- Implement `merge_sort()` in `recursive_sorting.py`. It's recommended that you use...
-  - A recursive function that handles dividing the array (or subarray) in half
-  - A helper function that handles merging sorted pieces back together
-- ***STRETCH*** - Try writing an *in-place* ***Merge Sort*** algorithm.
+- [x] Implement `merge_sort()` in `recursive_sorting.py`. It's recommended that you use...
+  - [x] A recursive function that handles dividing the array (or subarray) in half
+  - [x] A helper function that handles merging sorted pieces back together
+- [x] ***STRETCH*** - Try writing an *in-place* ***Merge Sort*** algorithm.
 
 
 ## TO-DO in recursive_sorting.py
-- Implement the `merge_sort()`
+- [x] Implement the `merge_sort()`
 
 ## Stretch Goals
 
 ### Make a better Merge Sort
-- While a little more challenging, it is possible to implement ***Merge Sort*** **in-place** (without using extra memory). Try writing a second `merge_sort()` function that does this.
+- [x] While a little more challenging, it is possible to implement ***Merge Sort*** **in-place** (without using extra memory). Try writing a second `merge_sort()` function that does this.
 
 ### Timsort is a combination of the Merge Sort and Insertion Sort algorithms.
 - What programming languages use **Timsort** to implement their built-in `sort()` functions?

@@ -23,16 +23,12 @@ def merge( arrA, arrB ):
         
         # If the values are equal, add them both and skip the
         # next index; otherwise, add the lesser value
-        if a == b:
-            merged_arr[i:i + 2] = [a, b]
-        elif a < b:
-            merged_arr[i] = a
-        elif b < a:
-            merged_arr[i] = b
-        # Increment the index wherever an element was added from
         if a <= b:
+            merged_arr[i] = a
             i_A += 1
+            i += 1
         if b <= a:
+            merged_arr[i] = b
             i_B += 1
 
     return merged_arr
@@ -73,16 +69,12 @@ def merge_in_place(arr, start, mid, end):
         
         # If the values are equal, add them both and skip the
         # next index; otherwise, add the lesser value
-        if a == b:
-            arr[i:i + 2] = [a, b]
-        elif a < b:
-            arr[i] = a
-        elif b < a:
-            arr[i] = b
-        # Increment the index wherever an element was added from
         if a <= b:
+            arr[i] = a
             i_A += 1
+            i += 1 # In case b also matches
         if b <= a:
+            arr[i] = b
             i_B += 1
     return arr
 
@@ -92,7 +84,7 @@ def merge_sort_in_place(arr, l, r):
     if r - l > 0:
         merge_sort_in_place(arr, l, m - 1)
         merge_sort_in_place(arr, m, r)
-        merge_in_place(arr, l, m, r+1)
+        merge_in_place(arr, l, m, r + 1)
     return arr
 
 # STRETCH: implement the Timsort function below
