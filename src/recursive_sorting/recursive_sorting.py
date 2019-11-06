@@ -80,8 +80,8 @@ def merge_in_place(arr, start, mid, end):
 
 def merge_sort_in_place(arr, l, r):
     # TO-DO
-    m = ((l + r) // 2) + 1
     if r - l > 0:
+        m = ((l + r) // 2) + 1
         merge_sort_in_place(arr, l, m - 1)
         merge_sort_in_place(arr, m, r)
         merge_in_place(arr, l, m, r + 1)
